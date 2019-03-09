@@ -24,4 +24,13 @@ export class TodoItemComponent implements OnInit {
     return classes
   }
 
+  // toggle when a checkbox is checked method
+  onToggle(todo) {
+    todo.completed = !todo.completed
+  }
+  // delete an item
+  onDelete(todo) {
+    console.log('delete')
+  }
+
 }
