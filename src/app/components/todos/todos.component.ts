@@ -25,4 +25,12 @@ export class TodosComponent implements OnInit {
     this.todoService.deleteTodo(todo).subscribe()
   }
 
+  addTodo(todo: Todo) {
+    // make post request to server through service
+    // once we get observable response back we'll add it
+    this.todoService.addTodo(todo).subscribe(todo => {
+      this.todos.push(todo)
+    })
+  }
+
 }
